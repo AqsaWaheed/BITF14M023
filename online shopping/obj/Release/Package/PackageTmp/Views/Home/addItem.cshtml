@@ -1,0 +1,63 @@
+﻿
+<section id="form">
+    <!--form-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="signup-form">
+                    <!--sign up form-->
+                    <h2>Add item !</h2>
+                    <form action="/Home/addItemconfirm" method="post">
+
+                        @Html.Label("code")
+                        @Html.TextBox("code", "", new { id="code",placeholder = "code" })
+                        @Html.ValidationMessage("code")
+
+
+
+                        @Html.Label("Category")
+                        @Html.TextBox("category", "", new { id = "cat", placeholder = "Category" })
+                         @Html.ValidationMessage("category")
+
+                        @Html.Label("name")
+                        @Html.TextBox("IName", "", new { id = "name", placeholder = "name" })
+                          @Html.ValidationMessage("IName")
+
+                        @Html.Label("price")
+                        @Html.TextBox("IPrice", "", new { id = "price", placeholder = "price" })
+                        @Html.ValidationMessage("IPrice")
+
+
+                        <button type="button" onclick="addItem()" class="btn btn-default">Add Item</button>
+                        </form>
+
+</div><!--/sign up form-->
+            </div>
+        </div>
+    </div>
+    <script>
+        function addItem() {
+
+            var code = $("#code").val();
+            var cat = $("#cat").val();
+            var name = $("#name").val();
+            var price = $("#price").val();
+            $.ajax({   
+                type: 'POST',
+                url: '/Home/addItemconfirm',
+                data: {
+                    code: code,
+                    category: cat,
+                    IName: name,
+                    IPrice: price
+                },
+                success: function (result) {
+                    alert("in success");
+                }
+
+
+            });
+
+        }
+    </script>
+</section><!--/form-->

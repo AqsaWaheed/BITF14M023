@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Database2ModelStoreContainer" CdmEntityContainer="Database2Entities3">
+    <EntitySetMapping Name="admins">
+      <EntityTypeMapping TypeName="Database2Model.admin">
+        <MappingFragment StoreEntitySet="admin">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AD_Name" ColumnName="AD_Name" />
+          <ScalarProperty Name="AD_email" ColumnName="AD_email" />
+          <ScalarProperty Name="AD_Password" ColumnName="AD_Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="clients">
+      <EntityTypeMapping TypeName="Database2Model.client">
+        <MappingFragment StoreEntitySet="client">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="C_email" ColumnName="C_email" />
+          <ScalarProperty Name="C_password" ColumnName="C_password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contacts">
+      <EntityTypeMapping TypeName="Database2Model.Contact">
+        <MappingFragment StoreEntitySet="Contact">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ConName" ColumnName="ConName" />
+          <ScalarProperty Name="ConEmail" ColumnName="ConEmail" />
+          <ScalarProperty Name="subject" ColumnName="subject" />
+          <ScalarProperty Name="message" ColumnName="message" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="items">
+      <EntityTypeMapping TypeName="Database2Model.item">
+        <MappingFragment StoreEntitySet="item">
+          <ScalarProperty Name="IID" ColumnName="IID" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="category" ColumnName="category" />
+          <ScalarProperty Name="IName" ColumnName="IName" />
+          <ScalarProperty Name="IPrice" ColumnName="IPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

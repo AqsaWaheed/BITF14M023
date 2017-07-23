@@ -1,0 +1,35 @@
+﻿<section id="form">
+    <!--form-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="signup-form">
+                    <!--sign up form-->
+                    <h2>Update item !</h2>
+                    <form role="form" action="/Home/updateItemConfirm/@Model.IID" method="post">
+
+
+                        @Html.Label("code")
+                        @Html.TextBox("code", @Html.Display("code"))
+
+                        @Html.Label("Category")
+                        @Html.TextBox("category", @Html.Display("category"))
+
+
+
+                        @Html.Label("Name")
+                        @Html.TextBox("IName", @Html.Display("IName"))
+
+                        @Html.Label("price")
+                        @Html.TextBox("IPrice", @Html.Display("IPrice"))
+
+
+
+                        <button type="submit">Update</button>
+                    </form>
+
+                </div><!--/sign up form-->
+            </div>
+        </div>
+    </div>
+</section><!--/form-->

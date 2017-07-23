@@ -1,0 +1,72 @@
+﻿@model List<online_shopping.Models.item>
+
+@{
+    ViewBag.Title = "Display Items";
+}
+
+<h2>Display</h2>
+
+<h2> List of Items</h2>
+
+<table border="1" align="center" cellspacing="12" cellpadding="5">
+    <tr>
+        <th>
+            id
+
+        </th>
+
+        <th>
+            code
+        </th>
+        <th>
+            category
+        </th>
+        <th>
+            name
+        </th>
+        <th>
+            price
+        </th>
+
+
+    </tr>
+
+    @foreach (var i in Model)
+    {
+        <tr>
+            <td>
+                @i.IID
+
+            </td>
+
+            <td>
+                @i.code
+            </td>
+            <td>
+                @i.category
+            </td>
+            <td>
+                @i.IName
+            </td>
+
+            <td>
+                @i.IPrice
+            </td>
+
+            <td>
+                <a href="/Home/UpdateItem/@i.IID ">Update</a>
+            </td>
+            <td>
+                <a href="/Home/Delete/@i.IID ">Delete</a>
+            </td>
+        </tr>
+    }
+
+</table>
+
+<a href="/Home/addItem">Insert</a>
+
+
+
+
+
